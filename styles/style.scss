@@ -4,7 +4,7 @@ $base-color: #494145;
 $green-color: #4e937cd4;
 $back-text-color: rgba(169, 167, 167, 0.375);
 $background-color: #4e937c1c;
-$font: "Open Sans", sans-serif;
+$font: 'Courgette', cursive;
 
 html {
   margin: 0;
@@ -18,9 +18,17 @@ body {
   width: 80%;
   margin: 0 auto;
   color: $base-color;
+  line-height: 1.4;
 }
+
 img {
   max-width: 100%;
+}
+h3 {
+    text-transform: uppercase;
+}
+p {
+  font-size: 1.1em;
 }
 .page-nav {
   position: fixed;
@@ -43,9 +51,12 @@ img {
     }
   }
 }
-.active {
-        background-color: $green-color !important;
-      }
+.active{
+  i{
+    background-color: $green-color!important;
+  }
+  
+} 
 /////// Local Styles
 .btn {
   position: relative;
@@ -105,6 +116,7 @@ img {
     text-transform: uppercase;
     font-size: 3em;
     font-weight: 700;
+    letter-spacing: 3px;
     span {
       color: $green-color;
     }
@@ -117,11 +129,11 @@ img {
       color: $back-text-color;
       font-size: 1.3em;
       transform: translate(-50%, -50%);
+      letter-spacing: 8px;
     }
   }
 }
-.sections,
-.main-header {
+.center{
   width: 80%;
   margin: 0 auto;
 }
@@ -139,7 +151,6 @@ img {
     border-bottom: none;
   }
 }
-
 // Main-header Styles
 .main-header
  {
@@ -183,12 +194,12 @@ img {
   }
   h2 {
     text-align: center;
-    padding-top: 3em;
     font-size: 1.7em;
     .dev {
       color: $green-color;
       text-transform: uppercase;
       text-shadow: 1px 1px #333;
+      letter-spacing: 3px;
     }
   }
 }
@@ -236,8 +247,14 @@ img {
     }
   }
 .education {
+  line-height: 1;
+  h4{
+    color: $green-color;
+    font-size: 1.3em;
+  }
   h3 {
     margin: 0;
+    font-size: 1em;
   }
   .btns {
     margin-top: 3em;
@@ -259,6 +276,9 @@ img {
     cursor: pointer;
     &:hover{
       transform: scale(1.1);
+    }
+    p{
+      font-size: .9em;
     }
     h3 {
       color: $green-color;
@@ -345,6 +365,9 @@ img {
 // Section3
 .section3 {
   text-align: center;
+  h3 {
+    padding-bottom: 4em;
+  }
   .carousel {position: relative;
     padding-top: 3em;
     .autoplay{
@@ -382,6 +405,18 @@ img {
     opacity: 0;
     transform: scale(0);
     transition: all .4s ease-in-out;
+    .tags{
+      span {
+        background-color: rgba(97, 117, 95, 0.729);
+        color: rgba(251, 241, 241, 0.66);
+        cursor: pointer;
+        &:hover {
+          color: #fff;
+          transform: scale(1.1);
+        }
+      }
+
+    }
     h4{
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -454,22 +489,25 @@ img {
           display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid rgba(153, 153, 153, 0.35);
+    border: 1px solid rgba(78, 147, 124, 0.83); 
+    background: #545454fa;
     border-radius: 20px;
     padding: 3em;
     label {
       width: 100%;
      padding-bottom: 1em;
     font-weight: 700;
-    color: #667a74;
+    color: #70bca5;
     text-align: initial;
     input, textarea, button {
           display: block;
     width: 100%;
-    border: 2px solid rgba(153, 153, 153, 0.237);
     border-radius: 20px;
     background: inherit;
     padding: 1em;
+    border: 2px solid rgb(144 221 203 / 24%);
+    margin-top: 1em;
+    color: #fff;
     }
     }
     .btn {
@@ -488,9 +526,12 @@ cursor: pointer;
   }
   .social {
     margin-left: 3em;
-    padding-top: 3em;
+    // padding-top: 3em;
     color: #667a74;
     font-weight: 700;
+    .hover-scale:hover{
+  transform: scale(1.2);
+}
     p {
       font-weight: 300;
     }
@@ -504,6 +545,10 @@ cursor: pointer;
     color: #0101b7;
     text-transform: uppercase;
     font-size: .9em;
+    i {
+      font-size: 2.5em;
+      padding-left: .5em;
+    }
 }
    } }
   }
@@ -537,5 +582,66 @@ cursor: pointer;
     }
     }
   }
+// Darkomodejs styles
 
+.darkmode--activated{
+  .darkmode-background {
+      background: #ebe2e2 !important;
+}
+  .main-header{
+    h1,h2{
+      color: #a2c3b7;
+    }
+  }
+  .btn{
+      color: #a2c3b7;
+    }
+  .title {
+    h1 {
+      color: rgb(222, 239, 207);
+    }
+  }
+  p {
+    color: #a2c3b7;
+  }
+  .progress-bar{
 
+  h2 {
+    color: #fff;
+  }
+  .progress {
+    border:1px solid #fff !important;
+  }
+}
+.carousel {
+.prev-slide, .next-slide{
+  color: #fff;
+}
+.item {
+  border: 1px solid #fff !important;
+}
+}
+.sections {
+  section {
+    border-bottom: 1px solid #bd4040
+  }
+}
+footer{
+  background: rgb(92 110 104 / 11%);
+  color: #1b011e75;
+  p {
+        color: rgb(160 149 187) !important;
+  }
+  div {
+    a{
+    color: #877272 !important;
+    &:hover{
+      color: #554e4e !important;
+    }
+  }
+}
+}
+}
+.darkmode-layer--button, .darkmode-toggle {
+  top: 32px;
+}

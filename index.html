@@ -7,9 +7,9 @@
     <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick.css"/>
 <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick-theme.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courgette&family=Indie+Flower&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
     <!-- Scripts -->
         <script
@@ -31,16 +31,19 @@
     <header class="navigation">
 
         <nav class="page-nav">
-            <a href="#home"><i class="fa fa-home active" aria-hidden="true"></i></a>
-            <a href="#about-me"><i class="fa fa-user-circle" aria-hidden="true"></i></a>
-            <a href="#skills"><i class="fa fa-code" aria-hidden="true"></i></a>
-            <a href="#projects"><i class="fa fa-picture-o" aria-hidden="true"></i></a>
-            <a href="#contact"><i class="fa fa-inbox" aria-hidden="true"></i></a>
+            <a class="tab-link active" href="#home"><i class="fa fa-home" aria-hidden="true"></i></a>
+            <a class="tab-link" href="#about-me"><i class="fa fa-user-circle" aria-hidden="true"></i></a>
+            <a class="tab-link" href="#skills"><i class="fa fa-code" aria-hidden="true"></i></a>
+            <a class="tab-link" href="#projects"><i class="fa fa-picture-o" aria-hidden="true"></i></a>
+            <a class="tab-link" href="#contact"><i class="fa fa-inbox" aria-hidden="true"></i></a>
         </nav>
     </header>
-   <header id="home" class="main-header">
+   <header id="home" class="center main-header">
    <h1>Welcome to my<span>Portfolio</span></h1>
-   <h2>Viktorija Gj.Jovanovska </br> <span class="dev">Front-end Developer</span></h2>
+   <div class="personal-info">
+       <h2>I'am</h2>
+       <h2>Viktorija Gj.Jovanovska </br> <span class="dev">Front-end Developer</span></h2>
+   </div>
     <div class="contact-me">
         <div class="btns">
         <a class="btn" href="https://github.com/viktorijagj" target="_blank">
@@ -52,10 +55,11 @@
     </div>
     </div>
    </header>
-   <main class="sections">
+   <main class="sections center">
     <section id="about-me" class="section section1">
                     <div class="title">
             <h1>About <span>Me</span><span class="back-text">About Me</span></h1>
+            <h3>Here you will find more information about me..</h3>
             </div>
          <div class="personal-info">
             <div class="education">
@@ -70,7 +74,7 @@
                 <p>South-West University "Neofit Rilski"</p>
                 <p>2011 - 2015</p>
                 <div class="btns">
-        <a class="btn download" href="#"> <span class="text">Download my CV  </span>
+        <a class="btn download" href="./images/ViktorijaCV.pdf" download> <span class="text">Download my CV  </span>
             <span class="icon"><i class="fa fa-download" aria-hidden="true"></i></span></a>
     </div>
             </div>
@@ -80,9 +84,8 @@
             
         </div>
         <div class="info">
-            <p>I have a master's degree in computer science and am an enthusiastic, creative
-and detail-oriented Frontend Software Developer. Looking for new opportunities to use my skills in coding, problem solving and help completing
-projects on time. I am focused on JavaScript and creating a responsive web design.I also have a passion for learning and implementing React. I love creating new websites from scratch.</p>
+            <p>I'm a Frontend web developer building the frontend of websites and applications that leads to the success of the overall product. I have a master's degree in computer science and am an enthusiastic, creative
+and detail-oriented developer. I am focused on JavaScript and creating a responsive web design.I also have a passion for implementing React. I love creating new websites from scratch. Check out some of my work in the Projects section.</p>
      
     <div class="experience">
         <div class="tab projects">
@@ -101,6 +104,7 @@ projects on time. I am focused on JavaScript and creating a responsive web desig
     <section id="skills" class="section section2">
         <div class="title">
             <h1>My <span>Skills</span><span class="back-text">My Skills</span></h1>
+            <h3> My current skills mostly in terms of programming and technology</h3>
             </div>
             <div class="progress-bar-container">
             <div class="progress-bar">
@@ -179,12 +183,14 @@ projects on time. I am focused on JavaScript and creating a responsive web desig
         <div class="title">
             <h1>My <span>Projects</span><span class="back-text">My Projects</span></h1>
             </div>
-        <h4>Here you can find some of my work</h4>
+        <h3>Here you can find some of my work</h3>
         <div class="carousel">
         <div class="autoplay">
             <div class="project-item">
                 <img class="item" src="./images/project1.png"/>
                 <div class="hover-item">
+                    <div class="tags"><span>#javaScript</span><span> #html5</span><span> #css3</span>
+                        </div>
                     <h4>Project sources:</h4>
                     <div>
                     <a href="https://github.com/viktorijagj/Brandly-website" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
@@ -196,6 +202,8 @@ projects on time. I am focused on JavaScript and creating a responsive web desig
             <div class="project-item">
                 <img class="item" src="images/project2.png" />
                 <div class="hover-item">
+                    <div class="tags"><span>#javaScript</span><span> #html5</span><span> #css3</span>
+                        </div>
                     <h4>Project sources:</h4>
                     <div>
                     <a href="https://github.com/viktorijagj/TerraResposiveWebSite" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
@@ -205,6 +213,8 @@ projects on time. I am focused on JavaScript and creating a responsive web desig
             <div class="project-item">
                 <img class="item" src="images/project3.png" />
                 <div class="hover-item">
+                    <div class="tags"><span> #html5</span><span> #css3</span>
+                        </div>
                     <h4>Project sources:</h4>
                     <div>
                     <a href="https://github.com/viktorijagj/responsiveEmail" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
@@ -214,6 +224,8 @@ projects on time. I am focused on JavaScript and creating a responsive web desig
             <div class="project-item">
                 <img class="item" src="./images/project4.png" />
                 <div class="hover-item">
+                    <div class="tags"><span>#javaScript</span><span> #html5</span><span> #css3</span>
+                        </div>
                     <h4>Project sources:</h4>
                     <div>
                     <a href="https://github.com/viktorijagj/FAQ" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
@@ -223,6 +235,8 @@ projects on time. I am focused on JavaScript and creating a responsive web desig
             <div class="project-item">
                 <img class="item" src="images/project5.png" />
                 <div class="hover-item">
+                    <div class="tags"><span>#javaScript</span><span> #html5</span><span> #css3</span>
+                        </div>
                     <h4>Project sources:</h4>
                     <div>
                     <a href="https://github.com/viktorijagj/ToDoList" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
@@ -232,6 +246,8 @@ projects on time. I am focused on JavaScript and creating a responsive web desig
              <div class="project-item">
                 <img class="item" src="images/project6.png" />
                 <div class="hover-item">
+                    <div class="tags"><span>#javaScript</span><span> #html5</span><span> #css3</span>
+                        </div>
                     <h4>Project sources:</h4>
                     <div>
                     <a href="https://github.com/viktorijagj/myTownMK" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
@@ -243,9 +259,11 @@ projects on time. I am focused on JavaScript and creating a responsive web desig
              <div class="project-item">
                 <img class="item" src="images/project7.png" />
                 <div class="hover-item">
+                    <div class="tags"><span>#react</span><span>#javaScript</span><span> #html5</span><span> #css3</span>
+                        </div>
                     <h4>Project sources:</h4>
                     <div>
-                    <a href="https://github.com/viktorijagj/ToDoList" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                    <a href="https://github.com/viktorijagj/bookstoreSmallReactApp" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div> 
@@ -284,12 +302,12 @@ projects on time. I am focused on JavaScript and creating a responsive web desig
             <div>
                 <p>Whats up:</p>
                   <p class="write-me">+38977654351 </p>
-                   <a href="https://api.whatsapp.com/send?phone=38977654351" target="_blank"> <img alt="Write me on WhatsApp" src="./images/WhatsAppButtonGreenSmall.svg" /></a>
+                   <a href="https://api.whatsapp.com/send?phone=38977654351" target="_blank"> <img class="hover-scale" alt="Write me on WhatsApp" src="./images/WhatsAppButtonGreenSmall.svg" /></a>
             </div>
             <div>
                 <p>Messanger: </p>
                   <p class="write-me">@viktorijagjorgjievska</p>
-                  <a class="fb" href="https://www.facebook.com/viktorija.gjorgievska" target="_blank">Write me <i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                  <a class="fb" href="https://www.facebook.com/viktorija.gjorgievska" target="_blank">Write me <i class="fa fa-facebook-official hover-scale" aria-hidden="true"></i></a>
             </div>
         </div>
         </div>
@@ -304,6 +322,8 @@ projects on time. I am focused on JavaScript and creating a responsive web desig
     <div class="copy">&copy; Viktorija Gjorgjievska Jovanovska 2023 </div>
    </footer>
         <!-- Scripts -->
+        <!-- DarkModejs -->
+        <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
         <!-- ScrollReveal script -->
                 <script src="./script/scrollreveal.min.js"></script>
                 <!-- EmailJS script -->
