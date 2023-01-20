@@ -122,7 +122,7 @@ p {
   transition: all 0.2s ease-in-out;
   z-index: -4;
   color: rgba(169, 167, 167, 0.375);
-  font-size: 1.3em;
+  font-size: 1em;
   transform: translate(-50%, -50%);
   letter-spacing: 8px;
 }
@@ -137,11 +137,12 @@ p {
   color: inherit;
 }
 .sections .section {
-  width: 100%;
   height: 100vh;
+  padding: 1em;
   padding-top: 3em;
   border-bottom: 1px solid rgba(78, 147, 124, 0.831372549);
   margin-top: 2em;
+  overflow: hidden;
 }
 .sections .section:last-of-type {
   border-bottom: none;
@@ -212,7 +213,7 @@ p {
 }
 .section1 .personal-info .img-container .border {
   border: 1px solid rgba(78, 147, 124, 0.831372549);
-  background-color: rgba(169, 167, 167, 0.375);
+  background-color: transparent;
   width: 100%;
   border-radius: 34%;
 }
@@ -320,7 +321,8 @@ p {
 .section2 .progress-bar-container .progress-bar .progress-bar-info .progress .design {
   width: 100%;
 }
-.section2 .progress-bar-container .progress-bar .progress-bar-info .progress .react, .section2 .progress-bar-container .progress-bar .progress-bar-info .progress .scss {
+.section2 .progress-bar-container .progress-bar .progress-bar-info .progress .react,
+.section2 .progress-bar-container .progress-bar .progress-bar-info .progress .scss {
   width: 40%;
 }
 
@@ -492,20 +494,22 @@ p {
   color: #70bca5;
   text-align: initial;
 }
-.section4 .contact-info .form form label input, .section4 .contact-info .form form label textarea, .section4 .contact-info .form form label button {
+.section4 .contact-info .form form label input,
+.section4 .contact-info .form form label textarea,
+.section4 .contact-info .form form label button {
   display: block;
   width: 100%;
   border-radius: 20px;
-  background: inherit;
   padding: 1em;
   border: 2px solid rgba(144, 221, 203, 0.24);
   margin-top: 1em;
   color: #fff;
+  background-color: #ecf5f1;
 }
 .section4 .contact-info .form form .btn {
-  width: 50%;
-  font-size: 1em;
-  padding: 0.5em;
+  width: 62%;
+  font-size: 0.9em;
+  padding: 0.5em 1em;
   color: #667a74;
   border: 1px solid #cdd5c8;
   color: #333;
@@ -551,7 +555,6 @@ p {
 
 footer {
   background: rgba(78, 147, 124, 0.1098039216);
-  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -574,8 +577,12 @@ footer div a:hover {
 .darkmode--activated .darkmode-background {
   background: #ebe2e2 !important;
 }
-.darkmode--activated .main-header h1, .darkmode--activated .main-header h2 {
+.darkmode--activated .main-header h1,
+.darkmode--activated .main-header h2 {
   color: #a2c3b7;
+}
+.darkmode--activated .main-header h1 span {
+  color: #707070;
 }
 .darkmode--activated .btn {
   color: #a2c3b7;
@@ -592,7 +599,8 @@ footer div a:hover {
 .darkmode--activated .progress-bar .progress {
   border: 1px solid #fff !important;
 }
-.darkmode--activated .carousel .prev-slide, .darkmode--activated .carousel .next-slide {
+.darkmode--activated .carousel .prev-slide,
+.darkmode--activated .carousel .next-slide {
   color: #fff;
 }
 .darkmode--activated .carousel .item {
@@ -615,6 +623,219 @@ footer div a:hover {
   color: #554e4e !important;
 }
 
-.darkmode-layer--button, .darkmode-toggle {
-  top: 32px;
+@media only screen and (max-width: 1560px) {
+  .sections .section1 {
+    height: auto;
+    padding-top: 0;
+    margin-top: 0;
+  }
+  .sections .section1 .personal-info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sections .section1 .personal-info .img-container .border {
+    height: 260px;
+    width: 220px;
+  }
+  .sections .section1 .personal-info .img-container .border .image {
+    width: inherit;
+    height: inherit;
+  }
+  .sections .section1 .personal-info .img-container .border .image img {
+    height: 260px;
+    width: 200px;
+  }
+  .sections .section1 .personal-info .info {
+    grid-column: 1/3;
+  }
+}
+@media only screen and (max-width: 940px) {
+  .page-nav {
+    flex-direction: row;
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+    border-radius: 10px;
+  }
+  .page-nav a {
+    padding: 0.4em;
+  }
+  .center {
+    width: 100%;
+  }
+  .main-header .contact-me {
+    height: auto;
+    padding-top: 0;
+    padding: 6em;
+  }
+  .sections .section {
+    padding-top: 0;
+    margin-top: 0.5em;
+    height: auto;
+  }
+  .sections .section .title .back-text {
+    display: none;
+  }
+  .sections .section1 .personal-info {
+    margin-top: 0 !important;
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+  }
+  .sections .section1 .personal-info .education {
+    display: flex;
+    line-height: 1;
+    flex-direction: column;
+    text-align: center;
+  }
+  .sections .section1 .personal-info div {
+    font-size: 1.2em;
+    line-height: 1.2;
+  }
+  .sections .section1 .personal-info .btns {
+    margin-bottom: 2em;
+    margin-top: 2em;
+  }
+  .sections .section1 .personal-info .img-container .border {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    background-color: transparent;
+  }
+  .sections .section1 .personal-info .img-container .border .image {
+    width: inherit;
+    height: inherit;
+  }
+  .sections .section1 .personal-info .img-container .border .image img {
+    height: inherit;
+    width: 90%;
+  }
+  .sections .section1 .personal-info .info {
+    padding: 1.2em;
+  }
+  .sections .experience {
+    margin-top: 0;
+    margin-bottom: 2em;
+    padding-top: 1em;
+  }
+  .sections .experience .tab {
+    padding: 0.5em;
+    width: 127px;
+  }
+  .btn {
+    margin: 0;
+  }
+  .main-header h1 span {
+    font-size: 3rem;
+  }
+  .main-header h2 {
+    font-size: 1.2rem;
+  }
+  .title h1 {
+    font-size: 2.5em;
+  }
+  .title h1 .back-text {
+    font-size: 0.8em;
+  }
+  .section2 .progress-bar-container {
+    padding-bottom: 2em;
+  }
+  .section2 .progress-bar-container .progress-bar .progres-title h2 {
+    font-size: 1em !important;
+  }
+  .section3 .title h3 {
+    padding: 0;
+  }
+  .section3 .carousel {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  .section3 .carousel .arrows {
+    width: 23px;
+    height: 23px;
+  }
+  .section3 .carousel .next-slide,
+.section3 .carousel .prev-slide {
+    border-bottom: 3px solid;
+    border-left: 3px solid;
+  }
+  .section4 .contact-info {
+    padding-top: 0;
+    flex-direction: column;
+  }
+  .section4 .contact-info .form {
+    width: 100%;
+  }
+  .section4 .contact-info .social {
+    text-align: center;
+    padding: 2em 0;
+    margin-left: 0;
+  }
+  footer {
+    flex-direction: column;
+  }
+  footer .copy {
+    padding-top: 1em;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .darkmode--activated .page-nav {
+    background-color: rgb(54, 67, 57) !important;
+  }
+  .page-nav {
+    background: rgba(216, 225, 221, 0.67) !important;
+  }
+  .btns {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .btns .btn {
+    margin-bottom: 1em;
+    font-size: 0.7em;
+  }
+}
+@media only screen and (max-width: 500px) {
+  body {
+    width: 100%;
+    background: rgba(186, 211, 200, 0.2509803922);
+  }
+  .main-header {
+    background-color: transparent;
+    height: auto;
+  }
+  .main-header h1 span {
+    font-size: 2rem;
+  }
+  .main-header h2 {
+    font-size: 1.1rem;
+  }
+  .title h1 {
+    font-size: 1.7em;
+  }
+  .title h3 {
+    font-size: 0.7em;
+  }
+  .section1 .personal-info .education div {
+    font-size: 0.9em;
+  }
+  .section1 .experience {
+    flex-direction: column;
+  }
+  .section1 .experience .tab {
+    font-size: 0.8em !important;
+    margin-bottom: 1em;
+  }
+  .section2 .progress-bar-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1em 2em;
+  }
+  .section3 .carousel .autoplay .hover-item {
+    font-size: 0.6em;
+  }
+  .section4 .contact-info .form form label input {
+    padding: 1em 0.2em;
+  }
 }/*# sourceMappingURL=style.css.map */
